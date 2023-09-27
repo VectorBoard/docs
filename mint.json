@@ -18,6 +18,10 @@
       "to": "#f59e0b"
     }
   },
+  "metadata": {
+    "og:title": "Vectorboard Documentation",
+    "og:image": "logo/banner.png"
+  },
   "topbarLinks": [],
   "topbarCtaButton": {
     "name": "Homepage",
