@@ -59,5 +59,11 @@
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/Vectorboard",
     "linkedin": "https://www.linkedin.com/in/hamedmohammadpour"
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": "phc_O34qlPDhjgQIa77PZSj1zr9OYbEKeC8spP4ir4OQEcH",
+      "apiHost": "https://app.posthog.com"
+    }
   }
 }
