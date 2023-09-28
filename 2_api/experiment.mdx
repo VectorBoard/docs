@@ -1,0 +1,108 @@
+---
+title: Experiment Class
+description: 🎯 The `Experiment` Class in Vectorboard
+---
+
+Meet the `Experiment` class—the heart of your RAG and LLM optimization journey. This class takes care of running individual experiments and logging key metrics like run time and embedding time. Let's dive right in!
+
+## 🎨 Attributes
+
+### `params` (dict)
+
+A dictionary containing experiment parameters. This is where you set what you want to experiment with.
+
+### `index` (int)
+
+An integer representing the index of the experiment. Useful for keeping track when you're running multiple experiments.
+
+### `documents` (list)
+
+A list of documents to be used in the experiment. You can feed it directly or via a `Loader`.
+
+### `vectorstore_list` (list)
+
+A list of vector stores used in the experiment. Think of it as your embedding database.
+
+### `retrievers_list` (list)
+
+A list of retrievers used in the experiment. These are the wizards fetching relevant info from your vector stores.
+
+### `chain` (object)
+
+An object representing the chain used in the experiment. Could be any supported type like `RetrievalQA`.
+
+### `query_results` (dict)
+
+A dictionary containing the results of your queries. Data goldmine!
+
+### `run_time` (float)
+
+Time it took to run the experiment, in seconds.
+
+### `embedding_time` (float)
+
+Time it took to embed the documents, in seconds.
+
+## 🛠 Methods
+
+### `__init__`
+
+Initializes an Experiment object. This is where the magic starts! 🎩
+
+```python
+def __init__(
+    self,
+    params,
+    index=0,
+    documents=None,
+    vectorstore_list=None,
+    retrievers_list=None,
+    chain=None,
+):
+    ...
+```
+
+### `run()`
+
+Runs the experiment with the given evaluation queries and returns a tuple containing the query results, the run time, and the embedding time.
+
+```python
+Copy code
+def run(self, eval_queries):
+...
+```
+
+### `_evaluate()`
+
+A private method that actually does the evaluation of your experiment. Called internally by run.
+
+```python
+Copy code
+def \_evaluate(self, chain, eval_queries):
+...
+```
+
+## 💡 Example Usage
+
+Here's a simple example to get you started:
+
+```python
+Copy code
+from vectorboard.experiment import Experiment
+
+# Initialize the Experiment
+
+exp = Experiment(
+params={"chunk_size": 300, "vector_store": FAISS, "embeddings": OpenAIEmbeddings()},
+index=1,
+documents=my_documents,
+)
+
+# Run the Experiment
+
+results, run_time, embedding_time = exp.run(eval_queries=["What is RAG?", "Explain LLM"])
+```
+
+And voila! You've just run your first Vectorboard experiment! 🎉
+
+Feel free to add this to your docs. Happy documenting! 📝

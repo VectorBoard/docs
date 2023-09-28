@@ -22,12 +22,18 @@
     "og:title": "Vectorboard Documentation",
     "og:image": "logo/banner.png"
   },
-  "topbarLinks": [],
+  "topbarLinks": [
+    {
+      "name": "Homepage",
+      "url": "https://Vectorboard.ai"
+    }
+  ],
   "topbarCtaButton": {
-    "name": "Homepage",
-    "url": "https://Vectorboard.ai"
+    "name": "Visit Github",
+    "url": "https://github.com/Vectorboard/Vectorboard"
   },
-  "tabs": [],
+  "tabs": [{ "name": "Typescript/Javascript", "url": "typescript" }],
+  "primaryTab": { "name": "Python" },
   "anchors": [
     {
       "name": "Github",
@@ -45,20 +51,43 @@
       "url": "https://x.com/Vectorboard"
     }
   ],
+  "versions": ["0.0.1"],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "quickstart", "roadmap"]
     },
     {
-      "group": "Components",
-      "pages": ["essentials/code"]
+      "group": "Core Concepts",
+      "pages": ["1_concepts/rag"]
+    },
+    {
+      "group": "API Reference",
+      "pages": ["2_api/gridsearch", "2_api/experiment"]
+    },
+    {
+      "group": "Tutorial and Examples",
+      "pages": ["3_tutorials/basic"]
+    },
+    {
+      "group": "Contributing",
+      "pages": ["4_dev/contributing", "4_dev/codeofconduct"]
+    },
+    {
+      "group": "Coming soon",
+      "pages": ["typescript/soon"]
     }
   ],
+  "feedback": {
+    "thumbsRating": true,
+    "raiseIssue": true,
+    "suggestEdit": true
+  },
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
+    "twitter": "https://twitter.com/Vectorboard",
     "github": "https://github.com/Vectorboard",
-    "linkedin": "https://www.linkedin.com/in/hamedmohammadpour"
+    "linkedin": "https://www.linkedin.com/in/hamedmohammadpour",
+    "huggingface": "https://huggingface.co/Vectorboard"
   },
   "analytics": {
     "posthog": {

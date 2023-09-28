@@ -1,0 +1,67 @@
+---
+title: GridSearch Class
+---
+
+# GridSearch Class
+
+The `GridSearch` class is used for performing grid search on a given chain.
+
+## Attributes
+
+- `experiments`: A list of Experiment objects.
+- `experiment_results`: A DataFrame containing the results of the experiments.
+- `console`: A Rich Console object.
+- `vectorstore_list`: A list of vector stores.
+- `retrievers_list`: A list of retrievers.
+- `chain`: A Chain object.
+
+## Methods
+
+### `__init__(self, chain)`
+
+Initializes a GridSearch object.
+
+#### Parameters
+
+- `chain (Chain)`: A Chain object.
+
+```python
+grid_search = GridSearch(chain=RetrievalQA)
+```
+
+### `create_experiments(self, param_grid, loader=None, documents=None)`
+
+Creates a list of Experiment objects based on the given parameter grid.
+
+#### Parameters
+
+- `param_grid (dict)`: A dictionary containing the parameter grid.
+- `loader (Loader)`: A Loader object.
+- `documents (list)`: A list of documents.
+
+#### Example
+
+<CodeGroup>
+```python With Loader
+param_grid = {
+    "chunk_size": [50, 300, 500],
+    "vector_store": [FAISS],
+    "embeddings": [OpenAIEmbeddings(), HuggingFaceEmbeddings()],
+}
+
+grid_search.create_experiments(param_grid=param_grid, loader=PyPDFLoader("recycling.pdf"))
+
+````
+```python With Documents
+param_grid = {
+    "chunk_size": [50, 300, 500],
+    "vector_store": [FAISS],
+    "embeddings": [OpenAIEmbeddings(), HuggingFaceEmbeddings()],
+}
+
+documents = PyPDFLoader("recycling.pdf").load()
+
+grid_search.create_experiments(param_grid=param_grid, documents=documents)
+````
+
+</CodeGroup>
