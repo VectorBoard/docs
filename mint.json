@@ -66,10 +66,6 @@
       "pages": ["2_api/gridsearch", "2_api/experiment"]
     },
     {
-      "group": "Tutorial and Examples",
-      "pages": ["3_tutorials/basic"]
-    },
-    {
       "group": "Contributing",
       "pages": ["4_dev/contributing", "4_dev/codeofconduct"]
     },
