@@ -49,6 +49,11 @@
       "name": "Twitter",
       "icon": "twitter",
       "url": "https://x.com/Vectorboard"
+    },
+    {
+      "name": "Blog",
+      "icon": "paper-plane",
+      "url": "https://Vectorboard.substack.com"
     }
   ],
   "versions": ["0.0.1"],
